@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | TechStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <section id="header">
+            <a href="#"><img src="logo.png" class="logo" alt="logo"></a>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping active"></i></a></li>
+                    <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
+                </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.html" class="actived"><i class="fa-solid fa-cart-shopping"></i></a>
+                <i id="bar" class="fa-solid fa-microchip"></i>
+            </div>
+    </section>
+    <section class="page-header cart-header">
+        <h2>#AlmostYours</h2>
+        <p>Your Favorites Are Just a Click Away!</p>
+    </section>
+    
+    <!-- Cart Section -->
+    <section id="cart-page" class="section-p1">
+        <h1>Your Shopping Cart</h1>
+        <div class="cart-container">
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Company</th>
+                        <th>Price</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+            <div class="cart-summary">
+                <h3>Total: <span id="cart-total">$0.00</span></h3>
+                <button class="buy-now" id="buy-now">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <footer class="footer content section-p1">
+            <!-- About Section -->
+            <div class="footer-section">
+                <h2>About Us</h2>
+                <p>We are a technology-driven company committed to delivering innovative solutions. Stay connected for updates and news.</p>
+            </div>
+            <!-- Quick Links Section -->
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Store</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <!-- Contact Form Section -->
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <form class="footer-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="button" onclick="showThankYou()" class="normal">Send Message</button>
+                </form>
+            </div>
+            <!-- Social Media Section -->
+            <div class="footer-section">
+                <h2>Follow Us</h2>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>

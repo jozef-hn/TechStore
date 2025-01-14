@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store | TechStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <section id="header">
+            <a href="#"><img src="logo.png" class="logo" alt="logo"></a>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
+                </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <i id="bar" class="fa-solid fa-microchip"></i>
+            </div>
+    </section>
+
+    <section class="page-header">
+        <h2>#TechForYou</h2>
+        <p>Explore the Latest Gadgets & Must-Have Devices!</p>
+    </section>
+
+     <!-- Products Section -->
+    <section id="product1">
+        <h1 class="section-m1">Shop Our Products</h1>
+        <!-- Filtering Buttons -->
+        <section id="filters">
+            <button class="filter-btn actived" onclick="filterProducts('all')">All</button>
+            <button class="filter-btn" onclick="filterProducts('smartphones')">Smartphones</button>
+            <button class="filter-btn" onclick="filterProducts('laptops')">Laptops</button>
+        </section>
+        <div class="pro-container">
+            <!-- Smartphones -->
+                <div class="pro" data-category="smartphones" onclick="openProductPopup('Apple iPhone 14', 'iphone.jpg', '$999.99', 'Apple', 'The iPhone 14 features a sleek design, excellent camera, and powerful performance.')">
+                    <img src="iphone.jpg" alt="iPhone 14">
+                    <div class="desc">
+                        <span>Apple</span>
+                        <h5>Apple iPhone 14</h5>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4>$999.99</h4>
+                    </div>
+                    <a href="#" onclick="addToCart({name: 'iPhone 14', image: 'iphone.jpg', company: 'Apple', price: '$999.99'})">
+                        <i class="fa-solid fa-cart-shopping cart"></i>
+                    </a>
+                </div>
+
+                <div class="pro" data-category="smartphones" onclick="openProductPopup('Samsung Galaxy S23', 'samsung.webp', '$799', 'Samsung', 'The Galaxy S23 offers top-tier performance, a great display, and an excellent camera system.')">
+                    <img src="samsung.webp" alt="Samsung Galaxy S23">
+                    <div class="desc">
+                        <span>Samsung</span>
+                        <h5>Samsung Galaxy S23</h5>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4>$799</h4>
+                    </div>
+                    <a href="#" onclick="addToCart({name: 'Samsung Galaxy S23', image: 'samsung.webp', company: 'Samsung', price: '$799'})">
+                        <i class="fa-solid fa-cart-shopping cart"></i>
+                    </a>
+                </div>
+
+                <div class="pro" data-category="smartphones" onclick="openProductPopup('Google Pixel 7', 'google.webp', '$899', 'Google', 'The Pixel 7 offers pure Android experience with excellent camera quality and battery life.')">
+                    <img src="google.webp" alt="Google Pixel 7">
+                    <div class="desc">
+                        <span>Google</span>
+                        <h5>Google Pixel 7</h5>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4>$899</h4>
+                    </div>
+                    <a href="#" onclick="addToCart({name: 'Google Pixel 7', image: 'google.webp', company: 'Google', price: '$899'})">
+                        <i class="fa-solid fa-cart-shopping cart"></i>
+                    </a>
+                </div>
+
+                <div class="pro" data-category="smartphones" onclick="openProductPopup('OnePlus 11', 'one-plus.webp', '$849', 'OnePlus', 'OnePlus 11 offers a great balance of performance, camera, and display at a competitive price.')">
+                    <img src="one-plus.webp" alt="OnePlus 11">
+                    <div class="desc">
+                        <span>OnePlus</span>
+                        <h5>OnePlus 11</h5>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4>$849</h4>
+                    </div>
+                    <a href="#" onclick="addToCart({name: 'OnePlus 11', image: 'one-plus.webp', company: 'OnePlus', price: '$849'})">
+                        <i class="fa-solid fa-cart-shopping cart"></i>
+                    </a>
+                </div>
+
+                <!-- Laptops -->
+                <div class="pro" data-category="laptops" onclick="openProductPopup('MacBook Pro', 'macbook.webp', '$1999', 'Apple', 'MacBook Pro offers powerful performance, a stunning Retina display, and long battery life.')">
+                    <img src="macbook.webp" alt="MacBook Pro">
+                    <div class="desc">
+                        <span>Apple</span>
+                        <h5>MacBook Pro</h5>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4>$1999</h4>
+                    </div>
+                    <a href="#" onclick="addToCart({name: 'MacBook Pro', image: 'macbook.webp', company: 'Apple', price: '$1999'})">
+                        <i class="fa-solid fa-cart-shopping cart"></i>
+                    </a>
+                </div>
+
+                <div class="pro" data-category="laptops" onclick="openProductPopup('Dell XPS 13', 'dell.webp', '$1399', 'Dell', 'The Dell XPS 13 is a powerful ultrabook with a premium build quality and long battery life.')">
+                    <img src="dell.webp" alt="Dell XPS 13">
+                    <div class="desc">
+                        <span>Dell</span>
+                        <h5>Dell XPS 13</h5>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4>$1399</h4>
+                    </div>
+                    <a href="#" onclick="addToCart({name: 'Dell XPS 13', image: 'dell.webp', company: 'Dell', price: '$1399'})">
+                        <i class="fa-solid fa-cart-shopping cart"></i>
+                    </a>
+                </div>
+
+                <div class="pro" data-category="laptops" onclick="openProductPopup('HP Spectre x360', 'hp.webp', '$1499', 'HP', 'The HP Spectre x360 combines style and power, featuring a 360-degree hinge and long-lasting battery.')">
+                    <img src="hp.webp" alt="HP Spectre x360">
+                    <div class="desc">
+                        <span>HP</span>
+                        <h5>HP Spectre x360</h5>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4>$1499</h4>
+                    </div>
+                    <a href="#" onclick="addToCart({name: 'HP Spectre x360', image: 'hp.webp', company: 'HP', price: '$1499'})">
+                        <i class="fa-solid fa-cart-shopping cart"></i>
+                    </a>
+                </div>
+
+                <div class="pro" data-category="laptops" onclick="openProductPopup('Lenovo ThinkPad X1', 'lenovo.webp', '$1299', 'Lenovo', 'The Lenovo ThinkPad X1 is a durable, powerful laptop with excellent keyboard and performance.')">
+                    <img src="lenovo.webp" alt="Lenovo ThinkPad X1">
+                    <div class="desc">
+                        <span>Lenovo</span>
+                        <h5>Lenovo ThinkPad X1</h5>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4>$1299</h4>
+                    </div>
+                    <a href="#" onclick="addToCart({name: 'Lenovo ThinkPad X1', image: 'lenovo.webp', company: 'Lenovo', price: '$1299'})">
+                        <i class="fa-solid fa-cart-shopping cart"></i>
+                    </a>
+                </div>
+    </section>
+
+    <!-- Product Popup -->
+    <div id="product-popup" class="popup hidden">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closeProductPopup()">×</span>
+            <div class="popup-left">
+                <img id="popup-img" src="" alt="Product Image">
+            </div>
+            <div class="popup-right">
+                <h3 id="popup-title">Product Title</h3>
+                <span id="popup-company">Company</span>
+                <div id="popup-stars" class="star"></div>
+                <p id="popup-price">Product Price</p>
+                <p id="popup-description">Product Description</p>
+                <!-- Dynamic Cart Button -->
+                <button id="add-to-cart" class="buy-now">Add to Cart <i class="fa-solid fa-cart-shopping cart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer content section-p1">
+            <!-- About Section -->
+            <div class="footer-section">
+                <h2>About Us</h2>
+                <p>We are a technology-driven company committed to delivering innovative solutions. Stay connected for updates and news.</p>
+            </div>
+            <!-- Quick Links Section -->
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Store</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <!-- Contact Form Section -->
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <form class="footer-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="button" onclick="showThankYou()" class="normal">Send Message</button>
+                </form>
+            </div>
+            <!-- Social Media Section -->
+            <div class="footer-section">
+                <h2>Follow Us</h2>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
